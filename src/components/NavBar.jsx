@@ -1,4 +1,4 @@
-import Logo from '../Assets/hardSolutions.png'
+// import Logo from '../Assets/hardSolutions.png'
 import CartWidget from './CartWidget'
 import './NavBar.css'
 
