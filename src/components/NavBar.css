@@ -97,7 +97,7 @@ nav .start-contact, a:nth-child(5):hover~.animation {
                 0 0 20px rgba(255, 0, 60, 0.5),
                 0 0 40px #e67e22,
                 0 0 100px #3498db,
-                0 0 200px #9b59b6;
+                0 0 300px #9b59b6;
     animation: animate 3s infinite alternate;    
 
 }
