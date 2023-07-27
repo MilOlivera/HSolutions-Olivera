@@ -1,5 +1,8 @@
 import CartWidget from './CartWidget'
-import './NavBar.css'
+import '../../public/css/NavBar.css'
+import { NavLink } from 'react-router-dom'
+
+
 
 
 
@@ -8,22 +11,24 @@ return (
             <>
                 <div>
                     <div>
-                        
-                            <li>
+
+                            <ul>
                                 <span><CartWidget /></span>        
-                            </li>
+                            </ul>
                       
                         <div>
-                            <h1 className='NavBarH1'>HARD SOLUTIONS</h1>
+                            <h1 className='NavBarH1'><NavLink to={'/'} style={{textDecoration:'none', color:'white'}}>HARD SOLUTIONS </NavLink></h1>
 
-                            <nav>
-	                            <a href="#">Consolas</a>
-	                            <a href="#">Perifericos</a>
-	                            <a href="#">Componentes</a>
-	                            <a href="#">Notebooks</a>
-	                            <a href="#">Sillas</a>
-	                            <div class="animation start-home"></div>
-                            </nav>
+                            <NavLink to={'/category/:categoryid'}>
+                                <nav>
+	                                <a href="#">Consolas</a>
+	                                <a href="#">Perifericos</a>
+	                                <a href="#">Componentes</a>
+	                                <a href="#">Notebooks</a>
+	                                <a href="#">Sillas</a>
+	                                <div className="animation start-home"></div>
+                                </nav>
+                            </NavLink>
 
                         </div>
                     </div>

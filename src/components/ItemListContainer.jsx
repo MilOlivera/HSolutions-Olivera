@@ -1,13 +1,27 @@
-import React from "react";
+import React from "react"
+import '../../public/css/ItemListContainer.css'
+import ItemCount from "./ItemCount"
+import randomImg from "../../public/img/image-1662214000093.jpg"
+import Item from "./Item"
+import NavBar from "./NavBar"
+import Footer from "./Footer"
+
 
 
 
 const ItemListContainer = ({greeting}) => {
 
+
+
     return(
-        <>
-            <h1 style={styles.h1Container}>{greeting}</h1>
-  
+        <>  
+            <NavBar />
+            <div>
+                <h1 style={styles.h1Container}>{greeting}</h1>
+            </div>
+      
+            <Item />
+            <Footer />
         </>
     )
 }
@@ -22,16 +36,8 @@ const styles = {
         paddingLeft: 10,
         textTransform: 'uppercase',
         fontWeight: 400,
-        fontSize: 60,
+        fontSize: 20,
         textAlign: 'center',
-        color: 'grey'
-        // textShadow: 0 0 0 'transparent',
-        //             0 0 10 '#c5c6c8',
-        //             0 0 20 'rgb(94,95,97)',
-        //             0 0 40 '#c5c6c8',
-        //             0 0 100 '#c5c6c8',
-        //             0 0 200 '#c5c6c8',
-        //             0 0 300 '#c5c6c8',
-        // animation: animate 3s infinite alternate,
+        color: 'grey',
     }
 }

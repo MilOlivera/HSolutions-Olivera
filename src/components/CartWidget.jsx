@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faDisplay, faUser} from "@fortawesome/free-solid-svg-icons";
-import './NavBar.css'
+import '../../public/css/NavBar.css'
 
 
 const CartWidget = () =>  {
@@ -13,7 +13,7 @@ return(
         <div className="contenedorCart">
         <FontAwesomeIcon icon={faUser} />
         <FontAwesomeIcon icon={faCartShopping} />
-        1
+        <small>1</small>
         {/* <button style={styles.iconCarrito} onClick={() => setCount((count) => count + 1)}>
           {count}
         </button> */}
