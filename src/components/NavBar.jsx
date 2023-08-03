@@ -1,12 +1,15 @@
 import CartWidget from './CartWidget'
 import '../../public/css/NavBar.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 
 
-
+// HAY QUE MODIFICAR TODOS LOS NAVLINKS CON LOS A YA QUE EL NAVLINK TE GENERA ETIQUETAS <A>.
+// TAMBIEN HAY QUE MODIFICAR LOS ESTILOS PARA QUE QUEDE BIEN COMO ESTABA ANTES
 
 const NavBar = () => {
+
+
 return (
             <>
                 <div>
@@ -18,21 +21,24 @@ return (
                       
                         <div>
                             <h1 className='NavBarH1'><NavLink to={'/'} style={{textDecoration:'none', color:'white'}}>HARD SOLUTIONS </NavLink></h1>
-
-                            <NavLink to={'/category/:categoryid'}>
-                                <nav>
-	                                <a href="#">Consolas</a>
-	                                <a href="#">Perifericos</a>
-	                                <a href="#">Componentes</a>
-	                                <a href="#">Notebooks</a>
-	                                <a href="#">Sillas</a>
-	                                <div className="animation start-home"></div>
-                                </nav>
-                            </NavLink>
+                        <div>
+	                        <nav>
+                                <NavLink to={'/category/1'}>Ropa</NavLink>
+                                <NavLink to={'/category/2'}>Electronicos</NavLink>
+                                <NavLink to={'/category/3'}>Muebles</NavLink>
+                                <NavLink to={'/category/4'}>Zapatos</NavLink>
+                                <NavLink to={'/category/5'}>Otros</NavLink>
+                                <div className="animation start-home"></div>
+                            </nav>
+                         
+	                       
+                         </div>       
+                            
 
                         </div>
                     </div>
                 </div>    
+                <Outlet/>
             </>
     )
 }

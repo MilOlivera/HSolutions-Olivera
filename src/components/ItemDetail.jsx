@@ -1,27 +1,30 @@
 import React from "react";
 import '../../public/css/ItemDetail.css'
 import ItemCount from "./ItemCount";
-import Item from "./Item";
-import { useState, useEffect, useParams } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
-const ItemDetail = () =>{
+const ItemDetail = () => {
 
-
+    
+    const [productos, setProductos] = useState([]);
     const url2 = 'https://api.escuelajs.co/api/v1'
-    const [prueba, setPrueba] = useState([]);
-
+    
     const {id} = useParams();
-    console.log(id, 'OTRO MENSAJE')
+
+    
+
+    
 
 
-    const buscarP = async() => {
+    const buscarProductos = async() => {
 
             try{
-                const response = await fetch(`${url2}/products/${id}`, {setTimeout: 2000})
+                const response = await fetch(`${url2}/products/${id}`, {setTimeout: 1000})
                 const data = await response.json()
-                setPrueba(data)
-                console.log(data)
+                setProductos([data])
+                
             }
                 catch(error){
             console.log(error)
@@ -31,7 +34,7 @@ const ItemDetail = () =>{
     
 
     useEffect(() => {
-        buscarP()
+        buscarProductos()
     }, [])
 
 
@@ -42,15 +45,21 @@ const ItemDetail = () =>{
 
     return(
         <div className="container">
-            <div className="detail">
-                <img src={"../../public/img/vite.svg"} alt="" className="detail__image" />
+            {productos.map((product, idx) => {
+                
+            return(
+            <div className="detail" key={idx}>
+                <img src={product.images} alt="" className="detail__image" />
                 <div className="content">
-                    <h1>ITEM DETAIL</h1>
+                    <h1>{product.title}</h1>
+                    <p>{product.description}</p>
                     <ItemCount  stock={10} onAdd={manejarCart}/>
                 </div>
             </div>
+            )
+            })}
         </div>
-    )
+    );
     
 }
 
