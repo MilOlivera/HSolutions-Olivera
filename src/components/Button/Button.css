@@ -1,0 +1,40 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 30px;
+	background: #2c3e50;
+    border: 1px solid lightgoldenrodyellow;
+	color: lightgoldenrodyellow;
+	font-size: 10px;
+	font-weight: 500;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn:hover{
+    color: #2c3e50;
+    background: lightgoldenrodyellow;
+    transition: 1s all;
+    
+}
+/* .btn.gral::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid #286cff;
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+.btn.gral:hover::after {
+	left: 0;
+} */

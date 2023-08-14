@@ -11,12 +11,12 @@
 } */
 
 .detail{
-    margin-top: 200px;
+    margin-top: 20px;
     margin-bottom: 3rem;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     border: 10px solid lightgoldenrodyellow;
     padding: 10px;
@@ -25,15 +25,24 @@
 }
 
 .detail__image{
-    width: 49%;
-    height: 400px;
+    width: 50%;
+    height: 200px;
     padding: 10px;
+  
 }
 
 .content{
-    width: 49%;
+    width: 50%;
     text-align: center;
     margin-top: 10%;
+    color: lightgoldenrodyellow;
+    text-transform: uppercase;
+}
+
+.content p{
+    text-transform: lowercase;
+    color: lightgoldenrodyellow;
+    opacity: 0.5;
 }
 
 /* @media screen and (min-width:768px){
