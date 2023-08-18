@@ -1,37 +1,21 @@
 .cardContainer{
     margin: 1%;
-    padding: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    
-    
+    grid-template-columns: repeat(6, 2fr);
+    background-color: #263849;
+    /* border: 1px solid lightgoldenrodyellow; */
+    border-radius: 20px;
+    opacity: 0.9;
 }
 
-.card{
 
-    border: 6px solid lightgoldenrodyellow;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-}
-/* .card:hover{
-
-    background-color: white;
-    border: 6px solid red;
-    ;
-} */
-
-.photoProduct{
-    /* background-color: green; */
-}
 .photoProduct img{
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
 .titleProduct{
-    /* background-color: red; */
+    
     font-family: 'Times New Roman', Times, serif;
     color: lightgoldenrodyellow;
 }

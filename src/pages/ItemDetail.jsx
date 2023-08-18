@@ -1,60 +1,64 @@
 import { useState, useEffect, useCallback } from "react";
-import {getProducts} from "../lib/products.request"
+import {getProduct} from "../lib/products.request"
 import { useNavigate, useParams } from "react-router-dom";
 import { useCartContext} from "../state/Cart.context"
 import { Item, ItemCount, Loader } from "../components/Item";
 import './ItemDetail.css'
 
 
+
 export const ItemDetail = () => {
 
     const { id } = useParams();
     const navigate = useNavigate();
-    const [products, setProducts] = useState({});
+    const [product, setProduct] = useState({});
 
     const { addProduct, itemInCart } = useCartContext();
     
     useEffect(() => {
 
-        getProducts(id).then((res) => {
+        getProduct(id).then((res) => {
             
             if(!res) return navigate('/')
-            setProducts(res);
-            console.log(id)
+            setProduct(res);
+           
         });
-    }, [id])
+    }, [])
 
 
 // 
     const handleAdd = useCallback(
         (qty) => {
-            addProduct(products, qty);
+            addProduct(product, qty);
         },
-        [addProduct, products]
+        [addProduct, product]
         
     );
 
-    if(!Object.keys(products).length) return <Loader />;
+   if(!Object.keys(product).length) return <Loader />;
 
     return(
 
-        <div className="container">
+        <div className="detailContainer">
          
                 
                 
              
              <div className="detail">
-                 <img src={products.image} alt="" className="detail__image" />
-                <div className="content">
-                     <h1>{products.title}</h1>
-                     <p>{products.description}</p>
-                     <p className="cardPrice">$ {products.price}</p>
+                 <img src={product.image} alt="" className="detail__image" height={140} width={170}/>
+            </div>
+            <div className="content">
+                     <h1 className="detailTitle">{product.title}</h1>
+                     <p className="detailDescription">{product.description}</p>
+                     <p className="cardPrice">$ {product.price}</p>
+                     <span className="detail__stock">Stock: {product.stock}</span>
+
                     <ItemCount 
-                        stock={products.stock - (itemInCart?.(id)?.qty || 0)}
+                        stock={product.stock - (itemInCart?.(id)?.qty || 0)}
                         onAdd={handleAdd}
                     />
                </div>
-            </div>
+           
              
         
          </div>

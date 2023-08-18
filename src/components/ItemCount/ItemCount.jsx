@@ -1,44 +1,44 @@
-import './ItemCount.css'
-import {Button} from '../Button/Button';
 import { useState } from "react";
+import "./ItemCount.css";
 
-export const ItemCount = ({stock = 0, onAdd}) => {
+export const ItemCount = ({ stock = 0, onAdd }) => {
+  
+  const [count, setCount] = useState(1);
 
+  const handleSum = () => {
 
-    const [count, setCount] = useState(1)
+    setCount(Math.min(stock, count + 1));
+  };
 
-    const sumarCart = () => {
-      if(stock > count)  setCount(count + 1)
-    }
-    const restarCart = () => {
-       if(count > 1 ) setCount(count - 1)
-    }
+  const handleSub = () => {
 
-return(
-    <div>
-        {stock ? (
+    setCount(Math.max(1, count - 1));
+  };
+
+  return (
+    <div className="item-count">
+      {stock ? (
         <>
-            <div>            
-                <button className='buttonCount' onClick={ () => restarCart() }>-</button>
-
-                <span className="spanItemCount">{count}</span>
-
-                <button className='buttonCount' onClick={ () => sumarCart() }>+</button>
-            </div>
-            <Button 
-                msg={'Agregar al carrito'} 
-                className='buttonAdd' 
-                disabled={!stock} 
-                onClick={ () => { 
-                onAdd(count)
-                setCount(1)
-                }} />
-            </>
-        ) : (
-            <h5> Tenes todo en el carrito</h5>
-        )}
-        
+          <div className="btn-count">
+            <button onClick={() => handleSub()} className="btn-sumres">-</button>
+            <span>{count}</span>
+            <button onClick={() => handleSum()} className="btn-sumres">+</button>
+          </div>
+          <button
+            className="btn-add"
+            disabled={!stock}
+            onClick={() => {
+              onAdd(count);
+              setCount(1);
+            }}
+          >
+            Agregar al carrito
+          </button>
+        </>
+      ) : (
+        <h5>Tienes todo en el carrito</h5>
+      )}
     </div>
-)
-}
+  );
+};
 

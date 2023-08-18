@@ -3,9 +3,9 @@ import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements } 
 import {NavBar} from './components/NavBar/NavBar';
 import {ItemDetail} from './pages/ItemDetail';
 import {Category} from './pages/Category';
-// import Form from './components/Formulario/Formulario'
 import {Home}  from './pages/Home';
 import {Cart} from './pages/Cart';
+import { CartProvider } from './state/Cart.context';
 
 
 
@@ -16,13 +16,13 @@ const routes = createBrowserRouter(
   <Route element={<NavBar />}>
     {" "}
     <Route path='/' element={<Home />} />  
-    <Route path='/category/:categoryid' element={<Category />} />
-    <Route path='/item/:id' element={<ItemDetail />} />    
+    <Route path='/category/:id' element={<Category />} />
+    <Route path='/item/:id' element={<ItemDetail />} />   
+    <Route path='/cart' element={<Cart />} /> 
   </Route>
 
-  {/* <Route path='/form' element={<Form />}/> */}
-  <Route path='/cart' element={<Cart />} />
 
+  
   </>
 ));
 
@@ -31,7 +31,9 @@ function App() {
 
   return (
     <>            
+          <CartProvider>
             <RouterProvider router={routes}/>         
+          </CartProvider>
     </>
   )
 }

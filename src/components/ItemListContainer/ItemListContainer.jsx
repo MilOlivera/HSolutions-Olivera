@@ -3,7 +3,9 @@ import "./ItemListContainer.css"
 
 export const ItemListContainer = ( { products, loading = false} ) => {
 
-    <div className="item-list">
+    return(
+    
+    <div className="cardContainer">
         {loading ? (
         <>
             <div className="skeleton">
@@ -17,8 +19,9 @@ export const ItemListContainer = ( { products, loading = false} ) => {
             </div>
         </>
         ) : (
+     
         products.map( (product) => (
-            
+           
             <Item
                 key={product.id}
                 id={product.id}
@@ -28,59 +31,12 @@ export const ItemListContainer = ( { products, loading = false} ) => {
                 
                 
             />    
-        ), console.log(products))
+       
+        ))
+
     )}
- 
+    
     </div>
+    )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const ItemListContainer = ({greeting}) => {
-
-
-
-//     return(
-//         <>  
-//             <div>
-//                 <h1 style={styles.h1Container}>{greeting}</h1>
-//             </div>
-      
-//             <Item />
-//             <Footer />
-//         </>
-//     )
-// }
-
-// export default ItemListContainer;
-
-// const styles = {
-
-//     h1Container:{
-//         fontFamily: 'Monoton',
-//         margin: 40,
-//         paddingLeft: 10,
-//         textTransform: 'uppercase',
-//         fontWeight: 400,
-//         fontSize: 20,
-//         textAlign: 'center',
-//         color: 'lightgoldenrodyellow',
-//     }
-// }

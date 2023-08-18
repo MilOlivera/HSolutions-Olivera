@@ -5,3 +5,5 @@ export {ItemListContainer} from "./ItemListContainer/ItemListContainer";
 export {Loader} from "./Loader/Loader";
 export {Button} from "./Button/Button";
 export {Footer} from "./Footer/Footer";
+export {Input} from "./Input/Input"
+export {LocaleString} from "./LocaleString/LocaleString" 

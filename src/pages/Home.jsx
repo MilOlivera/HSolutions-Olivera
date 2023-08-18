@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {getProducts}  from "../lib/products.request";
 import { ItemListContainer, Loader } from "../components/Item";
+import '../components/ItemListContainer/ItemListContainer.css'
 
 
 export const Home = () => {
@@ -16,7 +17,7 @@ export const Home = () => {
                 
                 setIsLoading(false);
                 setProducts(res);
-                console.log(res)
+            
             }
         )
     }, [])
@@ -27,14 +28,13 @@ export const Home = () => {
             <Loader />
         ) : (
 
-
-        <div className='cardContainer'>                
-            <div className="container">
+            <div> 
+                   
+           
                 <ItemListContainer products={products} />
-            </div>           
-            <p><strong>FUNCIONANDO</strong></p>
-        </div>
- 
+            
+                
+            </div>
         )}
         </div>
         )

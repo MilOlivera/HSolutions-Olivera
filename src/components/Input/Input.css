@@ -1,0 +1,155 @@
+.cart{
+    border: 1px solid lightgoldenrodyellow;
+    width: 50%;
+    margin-left: 25%;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.cart__item{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.cart__item-button{
+    text-decoration: none;
+    border: 1px solid lightgoldenrodyellow;
+    cursor: pointer;
+    text-transform: lowercase;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #34495e;
+    color: lightgoldenrodyellow;
+
+}
+.cart__item-button:hover{
+    border: 1px solid #34495e;
+    color: #34495e;
+    background-color: lightgoldenrodyellow;
+    transition: all 1s;
+    
+}
+/* .cart__item span{
+    background-color: yellow;
+} */
+.cart__products{
+    border-bottom: 1px solid black;
+}
+.cart__products div{
+    background-color: #34495e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.cart__products div .itemProduct, div .itemQty{
+
+    width: 100px;
+   
+}
+.cart__products div .itemPrice{
+
+    width: 60px;
+}
+
+.cart__products div .itemSubtotal{
+    width: 60px;
+    margin-right: 70px;
+}
+
+.cart__item .itemTitle{
+    width: 150px;
+
+}
+.cart__item .itemQty2{
+    margin-left: 20px;
+}
+/* .cart__item .itemPrice2{
+
+    align-items: center;
+    margin-left: 110px;
+    background-color: #23ce60;
+}
+.cart__item .itemSubtotal2{
+
+    align-items: center;
+    margin-left: 90px;
+    background-color: #23ce60;
+} */
+
+.cart__item-delete{
+    text-decoration: none;
+    position: relative;
+    border-radius: 200px;
+    border: none;
+    font-size: 15px;
+    color: #34495e;
+    cursor: pointer;
+}
+
+.cart__item-delete:hover{
+    background-color: lightcoral;
+    color: black;
+    transition: all 0.7s;
+}
+.cart__total{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: medium;
+    background-color: #34495e;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.formLabel{
+
+    margin-bottom: 15px;
+    margin: 20px 0 12px 0;
+    /* width: calc(100% / 2 - 20px); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.formLabel input{
+    width: 50%;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 6px;
+    border: 2px solid lightgoldenrodyellow;
+}
+
+.form button{
+    margin-left: 42.5%;
+}
+
+.cardTitle{
+    text-transform: uppercase;
+    text-align: center;
+    color: lightgoldenrodyellow;
+}
+
+/* @media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user_details .input_pox{
+        margin-bottom: 15px;
+        width:100%;
+    }
+    form .gender_details .category{
+        width: 100%;
+    }
+    .container form .user_details{
+        max-height: 300px;
+        overflow: scroll;
+    }
+    .user_details::-webkit-scrollber{
+     width: 0;
+    }
+} */
