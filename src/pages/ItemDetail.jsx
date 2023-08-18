@@ -50,7 +50,10 @@ export const ItemDetail = () => {
             <div className="content">
                      <h1 className="detailTitle">{product.title}</h1>
                      <p className="detailDescription">{product.description}</p>
-                     <p className="cardPrice">$ {product.price}</p>
+                     <p className="cardPrice">$ {product.price.toLocaleString("es-AR", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}</p>
                      <span className="detail__stock">Stock: {product.stock}</span>
 
                     <ItemCount 

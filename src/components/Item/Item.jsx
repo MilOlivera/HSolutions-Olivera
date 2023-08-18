@@ -15,7 +15,10 @@ const navigate = useNavigate();
                    <img src={image} height={130} width={170} />
                 
                   </div>
-                  <p className="cardPrice">$ {price}</p>
+                  <p className="cardPrice">$ {price.toLocaleString("es-AR", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}</p>
                   <div className="titleProduct">
                     <h4>{title}</h4>
 
