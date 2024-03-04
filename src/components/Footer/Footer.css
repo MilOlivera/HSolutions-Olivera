@@ -11,3 +11,26 @@ span {
     color: lightgoldenrodyellow;
 }
 
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+	
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+   
+}
+
+@media screen and (max-width: 576px) {
+    p{
+        width: 150%;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    p{
+        width: 200%;
+    }
+}

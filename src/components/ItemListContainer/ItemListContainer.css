@@ -20,3 +20,28 @@
     color: lightgoldenrodyellow;
 }
 
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+	.cardContainer{
+        grid-template-columns: repeat(4, 3fr);
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .cardContainer{
+        grid-template-columns: repeat(3, 4fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+   
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .cardContainer{
+        grid-template-columns: repeat(3, 4fr);
+    }
+}

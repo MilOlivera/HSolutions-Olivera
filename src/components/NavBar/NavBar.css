@@ -109,3 +109,43 @@ a:nth-child(5) {
 	color: lightgoldenrodyellow;
 	font-size: 15px;
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+	
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+   
+}
+
+@media screen and (max-width: 576px) {
+	.NavBarH1 {
+		font-weight: 400;
+		font-size: 20px;
+		text-align: end;
+		width: 120%;
+	}
+	
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+	.NavBarH1 {
+		font-weight: 400;
+		font-size: 20px;
+		text-align: end;
+		width: 125%;
+	}
+	.cartIcon .faCartShopping{
+		font-size: 15px;
+		color: lightgoldenrodyellow;
+		cursor: pointer;
+	}
+	.cartIcon .cart-widget__qty{
+		color: lightgoldenrodyellow;
+		font-size: 9px;
+	}
+}

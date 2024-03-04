@@ -1,27 +1,15 @@
+.cardContainer{
+    margin: 2%;
+    padding: 10px;
+    display: flex;
+}
 
 .card{
-   
+    background-color: green;
+    border: 3px solid black;
     border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
-}
-.card:hover{
-    background-color: #2c3e50;
-} 
-
-
-.photoProduct img{
-    border-radius: 5px;
-
-}
-
-.titleProduct{
-    /* background-color: red; */
-    font-family: 'Times New Roman', Times, serif;
-    color: lightgoldenrodyellow;
-    font-size: 9px;
-    text-transform: uppercase;
 }
 
 
@@ -41,5 +29,5 @@
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-    
+
 }

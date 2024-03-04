@@ -29,7 +29,6 @@
     text-align: center;
     color: lightgoldenrodyellow;
     text-transform: uppercase;
-
 }
 .detailTitle{
     margin-top: 50px;
@@ -49,13 +48,73 @@
     margin-top: 20px;
 } */
 
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+	
+}
 
-/* @media screen and (min-width:768px){
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+    .detailContainer{
+        width: 70%;
+     
+        border-radius: 20px;
+        opacity: 0.9;
+        border: 1px solid lightgoldenrodyellow;
+        padding: 15px;
+    }
     .detail__image{
-        width: 50%;
+        margin-top: 30%;
+        border-radius: 8px;
+        width: 300px;
+        margin-left: 20px;
     }
     .content{
-        padding-left: 3rem;
-        width: 50%;
+        width: 100%;
     }
-} */
+    .detailDescription{
+        width: 90%;
+        font-size: 14px;
+        color: lightgoldenrodyellow;
+        text-transform: lowercase;
+        opacity: 0.8;
+        padding: 5px;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .detailContainer{
+        width: 100%;
+        margin-left: 30%;
+        border-radius: 20px;
+        opacity: 0.9;
+        border: 1px solid lightgoldenrodyellow;
+        padding: 15px;
+    }
+    .detail__image{
+        margin-top: 30%;
+        border-radius: 8px;
+        width: 300px;
+        margin-left: 20px;
+    }
+    .content{
+        width: 100%;
+    }
+    .detailDescription{
+        width: 90%;
+        font-size: 14px;
+        color: lightgoldenrodyellow;
+        text-transform: lowercase;
+        opacity: 0.8;
+        padding: 5px;
+    }
+    .cardPrice{
+        width: 40%;
+    }
+}
